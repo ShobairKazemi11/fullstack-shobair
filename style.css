@@ -1,0 +1,154 @@
+:root {
+    --bg-color: #1e1e1e;
+    --primary-color: #e0e0e0;
+    --accent-color: #bf0426;
+    --accent-dark: #90031c;
+    --card-bg: #2a2a2a;
+    --input-bg: #3a3a3a;
+    --border-radius: 1rem;
+    --shadow-color: rgba(0, 0, 0, 0.4);
+    --shadow-box: 0px 4px 12px var(--shadow-color);
+    --transition: all 0.3s ease;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+
+body {
+    height: 100vh;
+    background-color: var(--bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    width: 100%;
+    padding: 2rem;
+}
+
+#header_section {
+    background-color: var(--card-bg);
+    width: 90%;
+    max-width: 600px;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-box);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#difficulty_level {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.difficulty_button {
+    cursor: pointer;
+    background-color: var(--input-bg);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: var(--transition);
+    color: var(--primary-color);
+}
+
+.difficulty_button:hover {
+    background-color: var(--accent-dark);
+    color: white;
+}
+
+#play_section button {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 0.7em 1.4em;
+    border-radius: 0.5em;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: var(--shadow-box);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+#play_section button:hover {
+    background-color: var(--accent-dark);
+}
+
+#play_section button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: var(--transition);
+}
+
+#play_section button:hover::before {
+    width: 100%;
+}
+
+#input_section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#input_button {
+    width: 90%;
+    max-width: 400px;
+    padding: 1rem;
+    background-color: var(--input-bg);
+    border: none;
+    border-radius: 0.7rem;
+    color: var(--primary-color);
+    font-size: 1rem;
+    box-shadow: var(--shadow-box);
+    transition: var(--transition);
+}
+
+#input_button:focus {
+    outline: 2px solid var(--accent-color);
+}
+
+#check_section button {
+    padding: 0.8rem 1.5rem;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: var(--shadow-box);
+    transition: var(--transition);
+}
+
+#check_section button:hover {
+    background-color: var(--accent-dark);
+}
+
+#time_section {
+    position: absolute;
+    top: 1.5rem;
+    left: 2rem;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+}
